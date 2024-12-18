@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 py-2 md:px-6">
+      <!-- Logo -->
+      <div>
+        <img src="image1" alt="Behance Logo" class="h-8 w-auto">
+      </div>
+
+      <!-- Center Links -->
+      <div class="hidden md:flex space-x-6 items-center text-gray-800 font-medium">
+        <a href="#" class="hover:text-blue-500">Explore</a>
+        <a href="#" class="hover:text-blue-500">Jobs</a>
+        <a href="#" class="hover:text-blue-500">Behance <span class="bg-blue-600 text-white px-1 rounded text-xs ml-1">PRO</span></a>
+        <a href="#" class="hover:text-blue-500">Hire Freelancers</a>
+      </div>
+
+      <!-- Right Side -->
+      <div class="flex items-center space-x-4">
+        <!-- Search -->
+        <div class="relative hidden md:block">
+          <input type="text" placeholder="Search..." class="w-72 px-4 py-2 border rounded-full focus:ring-gray-400">
+          <svg class="absolute right-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m2.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <a href="#" class="text-blue-500 font-semibold">Log In</a>
+        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scrollable Content -->
+  <div class="mt-16 relative w-full h-screen overflow-y-scroll">
+    <!-- Profile-Like Header -->
+    <div class="flex items-center justify-start space-x-4 px-20 py-4">
+      <div class="w-10 h-10 rounded-full overflow-hidden">
+        <img src="https://via.placeholder.com/40" alt="Profile" class="w-full h-full object-cover">
+      </div>
+      <div>
+        <span class="font-bold text-black">Harley-Davidson UX/UI</span>
+        <span class="text-sm text-gray-500">Tonic Black • <a href="#" class="text-blue-500 hover:underline">Follow</a></span>
+      </div>
+    </div>
+
+    <!-- Phone Mockup Image 1 -->
+    <div class="relative w-full flex items-center justify-center p-0">
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image1.png" alt="Mockup" class="w-full h-auto object-contain block">
+      </div>
+    </div>
+
+    <!-- Phone Mockup Image 2 -->
+    <div class="relative w-full flex items-center justify-center p-0">
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image2.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+    </div>
+
+    <!-- Sidebar: Right-side Fixed Buttons -->
+    <div class="absolute right-4 top-1/4 space-y-6">
+      <!-- Follow -->
+      <div class="flex flex-col items-center space-y-1 cursor-pointer">
+        <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+          <img src="https://img.icons8.com/ios/50/ffffff/add-user-male.png" class="h-5 w-5">
+        </div>
+        <span class="text-xs text-gray-400">Follow</span>
+      </div>
+
+      <!-- Hire -->
+      <div class="flex flex-col items-center space-y-1 cursor-pointer">
+        <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+          <img src="https://img.icons8.com/ios/50/ffffff/briefcase.png" class="h-5 w-5">
+        </div>
+        <span class="text-xs text-gray-400">Hire</span>
+      </div>
+
+      <!-- Save -->
+      <div class="flex flex-col items-center space-y-1 cursor-pointer">
+        <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+          <img src="https://img.icons8.com/ios/50/ffffff/bookmark-ribbon.png" class="h-5 w-5">
+        </div>
+        <span class="text-xs text-gray-400">Save</span>
+      </div>
+
+      <!-- Share -->
+      <div class="flex flex-col items-center space-y-1 cursor-pointer">
+        <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+          <img src="https://img.icons8.com/ios/50/ffffff/share-rounded.png" class="h-5 w-5">
+        </div>
+        <span class="text-xs text-gray-400">Share</span>
+      </div>
+
+      <!-- Appreciate -->
+      <div class="flex flex-col items-center space-y-1 cursor-pointer">
+        <div class="bg-blue-600 p-3 rounded-full hover:bg-blue-500">
+          <img src="https://img.icons8.com/ios/50/ffffff/like--v1.png" class="h-5 w-5">
+        </div>
+        <span class="text-xs text-blue-400 font-bold">Appreciate</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
