@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Sign In</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="relative flex w-full h-full">
+    <div class="absolute inset-0">
+      <img alt="Close-up of oranges with leaves" class="object-cover w-full h-full" height="1080" src="https://storage.googleapis.com/a1aa/image/BTe6pXepORnC5Ur8SILFs1GdNNeOVryfvP1L4XMgXIEec1gfE.jpg" width="1920"/>
+    </div>
+    <div class="relative z-10 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
+      <div class="hidden md:flex items-center justify-center w-1/2 h-full">
+        <div class="text-white">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-600 p-2 rounded-full">
+              <i class="fab fa-behance text-2xl"></i>
+            </div>
+            <span class="ml-2 text-2xl font-semibold">Behance</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-user-circle text-sm"></i>
+            <span class="ml-2 text-sm">Amanda Greene</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center w-full md:w-1/2 h-full">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md md:max-w-lg">
+          <h2 class="text-2xl font-bold mb-4">Sign in</h2>
+          <p class="mb-4">
+            New user?
+            <a class="text-blue-600" href="">Create an account</a>
+          </p>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700" for="email">Email address</label>
+            <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="email" type="email"/>
+          </div>
+          <div id="password-container" class="mb-4 hidden">
+            <label class="block text-sm font-medium text-gray-700" for="password">Password</label>
+            <input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="password" type="password"/>
+          </div>
+          <button onclick="checkEmail()" class="w-full bg-blue-600 text-white py-2 rounded-md mb-4">Continue</button>
+          <div class="flex items-center justify-between mb-4">
+            <hr class="w-full border-gray-300"/>
+            <span class="px-2 text-gray-500">Or</span>
+            <hr class="w-full border-gray-300"/>
+          </div>
+          <button class="w-full flex items-center justify-center bg-white border border-gray-300 py-2 rounded-md mb-2">
+            <i class="fab fa-google text-red-500 mr-2"></i>
+            Continue with Google
+          </button>
+          <button class="w-full flex items-center justify-center bg-white border border-gray-300 py-2 rounded-md mb-2">
+            <i class="fab fa-facebook text-blue-600 mr-2"></i>
+            Continue with Facebook
+          </button>
+          <button class="w-full flex items-center justify-center bg-white border border-gray-300 py-2 rounded-md mb-2">
+            <i class="fab fa-apple text-black mr-2"></i>
+            Continue with Apple
+          </button>
+          <a class="block text-center text-blue-600 mb-4" href="#">View more</a>
+          <a class="block text-center text-blue-600" href="#">Get help signing in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function checkEmail() {
+      const email = document.getElementById('email').value;
+      const storedEmail = localStorage.getItem('userEmail');
+      const passwordContainer = document.getElementById('password-container');
+
+      if (email === storedEmail) {
+        passwordContainer.classList.remove('hidden');
+        document.querySelector('button[onclick="checkEmail()"]').setAttribute('onclick', 'signIn()');
+      } else {
+        alert('Email not registered. Please create an account.');
+      }
+    }
+
+    function signIn() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const storedEmail = localStorage.getItem('userEmail');
+      const storedPassword = localStorage.getItem('userPassword');
+
+      if (email === storedEmail && password === storedPassword) {
+        alert('Sign in successful!');
+        window.location.href = 'dashboard.html';
+      } else {
+        alert('Invalid email or password.');
+      }
+    }
+  </script>
+</body>
+</html>
