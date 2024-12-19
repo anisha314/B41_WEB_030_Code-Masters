@@ -6,7 +6,7 @@
   <title>Mockup Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 overflow-hidden">
   <!-- Navigation Bar -->
   <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
     <div class="container mx-auto flex justify-between items-center px-4 py-2 md:px-6">
@@ -39,34 +39,65 @@
   </nav>
 
   <!-- Scrollable Content -->
-  <div class="mt-16 relative w-full h-screen overflow-y-scroll">
-    <!-- Profile-Like Header -->
-    <div class="flex items-center justify-start space-x-4 px-20 py-4">
-      <div class="w-10 h-10 rounded-full overflow-hidden">
-        <img src="https://via.placeholder.com/40" alt="Profile" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <span class="font-bold text-black">Harley-Davidson UX/UI</span>
-        <span class="text-sm text-gray-500">Tonic Black • <a href="#" class="text-blue-500 hover:underline">Follow</a></span>
-      </div>
-    </div>
-
-    <!-- Phone Mockup Image 1 -->
-    <div class="relative w-full flex items-center justify-center p-0">
+  <div class="mt-16 relative w-full h-screen overflow-auto">
+<!-- Profile-Like Header -->
+<div class="flex items-center justify-start space-x-4 px-20 py-4 mt-4 ml-16">
+  <div class="w-10 h-10 rounded-full overflow-hidden">
+    <img src="https://via.placeholder.com/40" alt="Profile" class="w-full h-full object-cover">
+  </div>
+  <div>
+    <span class="font-bold text-black">Harley-Davidson UX/UI</span>
+    <span class="text-sm text-gray-500">Tonic Black • <a href="#" class="text-blue-500 hover:underline">Follow</a></span>
+  </div>
+</div>
+    <!-- Mockup Images -->
+    <div class="relative w-full flex flex-col items-center space-y-0">
       <div class="max-w-[80%] mx-auto shadow-lg bg-white">
-        <img src="../Assets/image1.png" alt="Mockup" class="w-full h-auto object-contain block">
+        <img src="../Assets/image1.png" alt="Mockup 1" class="w-full h-auto object-contain block">
       </div>
-    </div>
-
-    <!-- Phone Mockup Image 2 -->
-    <div class="relative w-full flex items-center justify-center p-0">
       <div class="max-w-[80%] mx-auto shadow-lg bg-white">
         <img src="../Assets/image2.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image3.PNG" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image4.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image5.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image6.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image7.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image8.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image9.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image10.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image11.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image12.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image13.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="../Assets/image14.png" alt="Mockup 2" class="w-full h-auto object-contain block">
       </div>
     </div>
 
     <!-- Sidebar: Right-side Fixed Buttons -->
-    <div class="absolute right-4 top-1/4 space-y-6">
+    <div class="fixed right-12 top-1/4 space-y-5">
       <!-- Follow -->
       <div class="flex flex-col items-center space-y-1 cursor-pointer">
         <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
@@ -105,6 +136,14 @@
           <img src="https://img.icons8.com/ios/50/ffffff/like--v1.png" class="h-5 w-5">
         </div>
         <span class="text-xs text-blue-400 font-bold">Appreciate</span>
+      </div>
+
+      <!-- Tools -->
+      <div class="flex flex-col items-center space-y-1 cursor-pointer">
+        <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+          <img src="https://img.icons8.com/ios/50/ffffff/toolbox.png" class="h-5 w-5">
+        </div>
+        <span class="text-xs text-gray-400">Tools</span>
       </div>
     </div>
   </div>
