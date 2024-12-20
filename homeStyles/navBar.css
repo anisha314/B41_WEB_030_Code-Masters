@@ -1,0 +1,78 @@
+.navbar {
+    display: flex;
+    border: 1px solid gainsboro;
+    padding: 2rem 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+   
+    
+}
+.filter-btn{
+    border: 1px solid gainsboro;
+    padding: 1rem 1.5rem;
+    border-radius: 100vh;
+}
+.navbar .filter-btn, .navbar .sort-select {
+    cursor: pointer;
+}
+.navbar .search-input {
+    flex-grow: 1;
+    margin: 0 1rem;
+}
+.navbar .search-input input {
+    width: 100%;
+    padding:1rem;
+    border-radius: 100cap;
+    border: 1px solid gainsboro;
+   
+}
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001; /* Set a higher z-index */
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s ease; /* Added transition for smooth opening/closing */
+    padding-top: 60px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow to the sidebar */
+}
+
+.sidebar a {
+    border: 1px solid rgb(194, 188, 188);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    transition: 0.3s;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 100vb;
+    color: black;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+.sidebar a:hover {
+    background-color: gray;
+}
+.sort-select >select{
+    padding:1rem 0.5rem;
+    border: 1px solid gainsboro;
+    border-radius: 100cap;
+
+}
