@@ -130,6 +130,7 @@
       // Check if email and password match stored credentials
       if (email === storedEmail && password === storedPassword) {
         alert('Sign in successful!');
+        localStorage.setItem('userloginflag', 'True');
         window.location.href = '../src/index.html';
       } else {
         alert('Invalid email or password.');
