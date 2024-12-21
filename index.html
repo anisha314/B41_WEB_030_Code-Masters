@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Masters</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 py-2 md:px-6">
+      <!-- Logo -->
+      <div>
+        <img src="Assets/logo.png" alt="Behance Logo" class="h-10 w-auto">
+      </div>
+
+      <!-- Center Links -->
+      <div class="hidden md:flex space-x-6 items-center text-gray-800 font-medium">
+        <div class="relative group">
+          <a href="#" class="hover:text-blue-500 cursor-pointer">Explore</a>
+          <div class="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md w-40">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Search & Explore</a>
+            <a href="homeSection/assets.html" class="block px-4 py-2 hover:bg-gray-100">Assets</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Curated Gallery</a>
+          </div>
+        </div>
+        <a href="#" class="hover:text-blue-500">Jobs</a>
+        <a href="#" class="hover:text-blue-500">Behance <span class="bg-blue-600 text-white px-1 rounded text-xs ml-1">PRO</span></a>
+        <div class="relative group">
+          <a href="#" class="hover:text-blue-500 cursor-pointer">Hire Freelancers</a>
+          <div class="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md w-40">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Logo Designers</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Brand Designers</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Website Designers</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Social Media Designers</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="flex items-center space-x-4">
+        <!-- Search -->
+        <div class="relative hidden md:block">
+          <input type="text" placeholder="Search..." class="w-72 px-4 py-2 border rounded-full focus:ring-gray-400">
+          <svg class="absolute right-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m2.6-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+        <a href="auth/signin.html" class="text-blue-500 font-semibold" id="loginButton">Log In</a>
+        <a href="auth/signup.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" id="signUpButton">Sign Up</a>
+        <button id="signOutButton" onclick="signOut()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 hidden">Sign Out</button>
+        <script>
+      if (localStorage.getItem('userEmail') && localStorage.getItem('userPassword') && localStorage.getItem('userloginflag') != 'False') {
+      hideLoginSignUpButtons();
+      
+    }
+
+    function hideLoginSignUpButtons() {
+      const loginButton = document.getElementById('loginButton');
+      const signUpButton = document.getElementById('signUpButton');
+      document.getElementById('signOutButton').style.display = 'inline'; // Show sign-out button
+      if (loginButton) loginButton.style.display = 'none';
+      if (signUpButton) signUpButton.style.display = 'none';
+    }
+
+    function signOut() {
+      // Only hide the sign-out button and show login and sign-up buttons
+      document.getElementById('loginButton').style.display = 'inline';
+      document.getElementById('signUpButton').style.display = 'inline';
+      localStorage.setItem('userloginflag', 'False');
+      document.getElementById('signOutButton').style.display = 'none';// Hide sign-out button
+
+      alert('You have been signed out!');
+    }
+        </script>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scrollable Content -->
+  <div class="mt-16 relative w-full h-screen">
+<!-- Profile-Like Header -->
+<div class="flex items-center justify-start space-x-4 px-20 py-4 mt-4 ml-16">
+  <div class="w-10 h-10 rounded-full overflow-hidden">
+    <img src="Assets/TonicBlack.jpg" alt="Profile" class="w-full h-full object-cover">
+  </div>
+  <div>
+    <span class="font-bold text-black">Harley-Davidson UX/UI</span></br>
+    <span class="text-sm text-gray-500 font-bold">Tonic Black • <a href="#" class="text-blue-500 hover:underline">Follow</a></span>
+  </div>
+</div>
+    <!-- Mockup Images -->
+    <div class="relative w-full flex flex-col items-center space-y-0">
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image1.png" alt="Mockup 1" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image2.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image3.PNG" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image4.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image5.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image6.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image7.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image8.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image9.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image10.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image11.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image12.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white">
+        <img src="Assets/image13.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+      <div class="max-w-[80%] mx-auto shadow-lg bg-white" id = "lastImage">
+        <img src="Assets/image14.png" alt="Mockup 2" class="w-full h-auto object-contain block">
+      </div>
+    </div>
+    <!-- Sidebar: Right-side Fixed Buttons -->
+<div class="relative">
+  <div class="fixed right-12 top-1/4 space-y-5" id="sidebar">
+    <!-- Follow -->
+    <div class="flex flex-col items-center space-y-1 cursor-pointer group relative">
+      <div class="w-10 h-10 rounded-full overflow-hidden">
+        <img src="Assets/TonicBlack.jpg" alt="Profile" class="w-full h-full object-cover">
+      </div>
+      <span class="text-xs font-bold text-gray-400">Follow</span>
+
+      <!-- Profile Card -->
+      <div
+        class="absolute top-[180%] left-1 transform -translate-x-full -translate-y-full hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 z-10"
+      >
+        <div class="flex items-center space-x-4">
+          <!-- Profile Picture -->
+          <img
+            src="Assets/TonicBlack.jpg"
+            alt="Profile"
+            class="w-12 h-12 rounded-full"
+          />
+          <!-- Profile Info -->
+          <div>
+            <h4 class="font-bold text-gray-800">Tonic Black</h4>
+            <p class="text-sm text-gray-500">Minsk, Belarus</p>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between text-sm text-gray-700">
+          <div>
+            <span class="font-bold">1.6K</span> Appreciations
+          </div>
+          <div>
+            <span class="font-bold">91</span> Followers
+          </div>
+          <div>
+            <span class="font-bold">10K</span> Views
+          </div>
+        </div>
+        <div class="mt-4 flex space-x-2">
+          <button
+            class="flex-1 bg-blue-500 text-white py-1 px-2 rounded-lg hover:bg-blue-600"
+          >
+            Follow
+          </button>
+          <button
+            class="flex-1 border border-blue-500 text-blue-500 py-1 px-2 rounded-lg hover:bg-blue-100"
+          >
+            Hire
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hire -->
+    <div class="flex flex-col items-center space-y-1 cursor-pointer group relative">
+      <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+        <img src="https://img.icons8.com/ios/50/ffffff/briefcase.png" class="h-5 w-5" />
+      </div>
+      <span class="text-xs font-bold text-gray-400">Hire</span>
+      <!-- Tooltip -->
+      <div
+        class="absolute left-1 top-[64%] transform -translate-x-full -translate-y-full hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 z-10"
+      >
+        Hire Us
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="flex flex-col items-center space-y-1 cursor-pointer group relative">
+      <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+        <img src="https://img.icons8.com/ios/50/ffffff/toolbox.png" class="h-5 w-5" />
+      </div>
+      <span class="text-xs font-bold text-gray-400">Tools</span>
+      <!-- Tooltip -->
+      <div
+      class="absolute left-1 top-[64%] transform -translate-x-full -translate-y-full hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 z-10"
+      >
+        Visual Studio Code
+      </div>
+    </div>
+
+    <!-- Save -->
+    <div class="flex flex-col items-center space-y-1 cursor-pointer group relative">
+      <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+        <img src="https://img.icons8.com/ios/50/ffffff/bookmark-ribbon.png" class="h-5 w-5" />
+      </div>
+      <span class="text-xs font-bold text-gray-400">Save</span>
+      <!-- Tooltip -->
+      <div
+      class="absolute left-1 top-[64%] transform -translate-x-full -translate-y-full hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 z-10"
+      >
+        Save
+      </div>
+    </div>
+
+    <!-- Share -->
+    <div class="flex flex-col items-center space-y-1 cursor-pointer group relative">
+      <div class="bg-gray-700 p-3 rounded-full hover:bg-gray-600">
+        <img src="Assets/icons8-right-2-50.png" class="h-5 w-5" />
+      </div>
+      <span class="text-xs font-bold text-gray-400">Share</span>
+      <!-- Tooltip -->
+      <div
+      class="absolute left-1 top-[64%] transform -translate-x-full -translate-y-full hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 z-10"
+      >
+        Share & Embed This Project
+      </div>
+    </div>
+
+    <!-- Appreciate -->
+    <div class="flex flex-col items-center space-y-1 cursor-pointer group relative">
+      <div class="bg-blue-600 p-3 rounded-full hover:bg-blue-500">
+        <img src="Assets/icons8-thumbs-up-50.png" class="h-5 w-5" />
+      </div>
+      <span class="text-xs text-blue-400 font-bold">Appreciate</span>
+      <!-- Tooltip -->
+      <div
+      class="absolute left-1 top-[64%] transform -translate-x-full -translate-y-full hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72 z-10"
+      >
+        Appreciate This Project
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class = "py-10"></div>
+    <footer id="footer" class="bg-black text-white footer">
+      <div class="container mx-auto px-4 py-10">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+          <!-- Column 1 -->
+          <div> 
+            <h4 class="font-bold mb-3">Code Masters</h4>
+          </div>
+          <!-- Column 2 -->
+          <div>
+            <h4 class="font-bold mb-3">Built For Creatives</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:underline">Try Behance Pro</a></li>
+              <li><a href="#" class="hover:underline">Find Inspiration</a></li>
+              <li><a href="#" class="hover:underline">Get Hired</a></li>
+              <li><a href="#" class="hover:underline">Sell Creative Assets</a></li>
+              <li><a href="#" class="hover:underline">Sell Freelance Services</a></li>
+            </ul>
+          </div>
+          <!-- Column 3 -->
+          <div>
+            <h4 class="font-bold mb-3">Find Talent</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:underline">Post a Job</a></li>
+              <li><a href="#" class="hover:underline">Graphic Designers</a></li>
+              <li><a href="#" class="hover:underline">Photographers</a></li>
+              <li><a href="#" class="hover:underline">Video Editors</a></li>
+              <li><a href="#" class="hover:underline">Web Designers</a></li>
+              <li><a href="#" class="hover:underline">Illustrators</a></li>
+            </ul>
+          </div>
+          <!-- Column 4 -->
+          <div>
+            <h4 class="font-bold text-black mb-3">Behance</h4>
+            <ul class="space-y-2 text-black text-sm">
+              <li>About Behance</a></li>
+              <li>Adobe Portfolio</a></li>
+              <li>Download the App</a></li>
+              <li>Blog</a></li>
+              <li>Careers</a></li>
+              <li>Help Center</a></li>
+              <li>Contact Us</a></li>
+            </ul>
+          </div>
+          <!-- Column 5 -->
+          <div>
+            <h4 class="font-bold mb-3">Social</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:underline">Instagram</a></li>
+              <li><a href="#" class="hover:underline">Twitter</a></li>
+              <li><a href="#" class="hover:underline">Pinterest</a></li>
+              <li><a href="#" class="hover:underline">Facebook</a></li>
+              <li><a href="#" class="hover:underline">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 border-t border-gray-700 pt-5 text-sm flex flex-col md:flex-row justify-between">
+          <div>
+            <span class="ml-2">Created By Code Masters</span>
+          </div>
+          <div class="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" class="hover:underline">English</a>
+            <a href="#" class="hover:underline">TOU</a>
+            <a href="#" class="hover:underline">Privacy</a>
+            <a href="#" class="hover:underline">Community</a>
+            <a href="#" class="hover:underline">Cookie preferences</a>
+            <a href="#" class="hover:underline">Do not sell or share my personal information</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  </div>
+<style>
+  #sidebar {
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+</style>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+   const sidebar = document.getElementById("sidebar");
+   const footer = document.getElementById("footer");
+   const lastImage = document.getElementById("lastImage");
+   let lastScrollTop = 0; // Track the last scroll position
+
+   // Function to update sidebar position based on scroll
+   function updateSidebarPosition() {
+      const lastImageRect = lastImage.getBoundingClientRect();
+      const footerRect = footer.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const scrollTop = window.scrollY;
+
+      // Scroll down: Move the sidebar with the last image
+      if (lastImageRect.top <= viewportHeight && lastImageRect.bottom > 0) {
+         const offset = Math.max(lastImageRect.top, 0);
+         sidebar.style.position = 'fixed';
+         sidebar.style.top = `calc(25%)`; // Set position relative to 25% of viewport height
+      }
+
+      // Scroll up: Reset sidebar position when scrolling back up
+      if (scrollTop < lastScrollTop) {
+         sidebar.style.position = 'fixed';
+         sidebar.style.top = `calc(25%)`; // Reset to 25% of the viewport height when scrolling up
+      }
+
+      // Scroll down: Stop the sidebar at the footer
+      if (footerRect.top <= viewportHeight && footerRect.top >= 0) {
+         const stopOffset = footerRect.top - viewportHeight;
+         sidebar.style.position = 'absolute';
+         sidebar.style.top = `${stopOffset}px`; // Stop moving as it reaches the footer
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Update last scroll position
+   }
+
+   // Listen for the scroll event on the window
+   window.addEventListener("scroll", updateSidebarPosition);
+});
+
+  </script>
+</body>
+</html>
