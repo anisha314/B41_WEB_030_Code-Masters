@@ -128,3 +128,11 @@ Through this project, we learned:-
 -Real-Time Inventory: Sync products with inventory data for availability status.
 -User Accounts: Develop profiles with order history and personalized recommendations.
 
+![Project Screenshot1](Assets/project-1.png)
+![Project Screenshot2](Assets/project-2.png)
+![Project Screenshot3](Assets/project-3.png)
+![Project Screenshot4](Assets/project-4.png)
+![Project Screenshot5](Assets/project-5.png)
+![Project Screenshot6](Assets/project-6.png)
+![Project Screenshot6](Assets/project-7.png)
+
