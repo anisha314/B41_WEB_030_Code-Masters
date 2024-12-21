@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assets.html</title>
+    <title>Code Masters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../homeStyles/navBar.css">
     <link rel="stylesheet" href="../homeStyles/home.css">
-    <link rel="stylesheet" href="../homeStyles/footer.css">
+    <!--link rel="stylesheet" href="../homeStyles/footer.css"-->
 
 
 </head>
@@ -46,30 +47,76 @@
         <!-- Dynamic content will be added here -->
     </div>
     <!-- footer section -->
-    <footer>
-        <div class="footer">
-          <div class="row">
-            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/home"><i class="fa-brands fa-linkedin"></i></i></a>
-            <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><i class="fa-brands fa-twitter"></i></a>
-          </div>
-  
-          <div class="row">
-            <ul>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Our Services</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Career</a></li>
-            </ul>
-          </div>
-  
-          <div class="row">
-            All rights reserved || Designed By: B41_WEB_030_Code Masters
-          </div>
-        </div>
-    </footer>
+<footer class="bg-black text-white footer">
+  <div class="container mx-auto px-4 py-10">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+      <!-- Column 1 -->
+      <div> 
+        <h4 class="font-bold mb-3">Code Masters</h4>
+      </div>
+      <!-- Column 2 -->
+      <div>
+        <h4 class="font-bold mb-3">Built For Creatives</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Try Behance Pro</a></li>
+          <li><a href="#" class="hover:underline">Find Inspiration</a></li>
+          <li><a href="#" class="hover:underline">Get Hired</a></li>
+          <li><a href="#" class="hover:underline">Sell Creative Assets</a></li>
+          <li><a href="#" class="hover:underline">Sell Freelance Services</a></li>
+        </ul>
+      </div>
+      <!-- Column 3 -->
+      <div>
+        <h4 class="font-bold mb-3">Find Talent</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Post a Job</a></li>
+          <li><a href="#" class="hover:underline">Graphic Designers</a></li>
+          <li><a href="#" class="hover:underline">Photographers</a></li>
+          <li><a href="#" class="hover:underline">Video Editors</a></li>
+          <li><a href="#" class="hover:underline">Web Designers</a></li>
+          <li><a href="#" class="hover:underline">Illustrators</a></li>
+        </ul>
+      </div>
+      <!-- Column 4 -->
+      <div>
+        <h4 class="font-bold text-black mb-3">Behance</h4>
+        <ul class="space-y-2 text-black text-sm">
+          <li>About Behance</a></li>
+          <li>Adobe Portfolio</a></li>
+          <li>Download the App</a></li>
+          <li>Blog</a></li>
+          <li>Careers</a></li>
+          <li>Help Center</a></li>
+          <li>Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Column 5 -->
+      <div>
+        <h4 class="font-bold mb-3">Social</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Instagram</a></li>
+          <li><a href="#" class="hover:underline">Twitter</a></li>
+          <li><a href="#" class="hover:underline">Pinterest</a></li>
+          <li><a href="#" class="hover:underline">Facebook</a></li>
+          <li><a href="#" class="hover:underline">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 border-t border-gray-700 pt-5 text-sm flex flex-col md:flex-row justify-between">
+      <div>
+        <span class="ml-2">Created By Code Masters</span>
+      </div>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:underline">English</a>
+        <a href="#" class="hover:underline">TOU</a>
+        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline">Community</a>
+        <a href="#" class="hover:underline">Cookie preferences</a>
+        <a href="#" class="hover:underline">Do not sell or share my personal information</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
 <script src="../homeScripts/assets.js"></script>

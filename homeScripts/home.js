@@ -47,13 +47,17 @@ items.forEach(item => {
 const imageContainer = document.createElement("div");
 imageContainer.className = "image-container";
 
+const link = document.createElement("a");
+link.href = "../src/index.html"; // Replace this with your actual URL or dynamic value
+
 const img = document.createElement("img");
 img.src = item.image;
 img.alt = item.name;
-
+link.appendChild(img);
+imageContainer.appendChild(link);
 const bottomLeft = document.createElement("div");
 bottomLeft.className = "bottom-left";
-
+const titleLink = document.createElement("a");
 const title = document.createElement("h4");
 title.textContent = item.name;
 
@@ -80,12 +84,13 @@ bottomLeft.appendChild(icons);
 
 const uploader = document.createElement("p");
 uploader.textContent = item.uploaderName;
-
-imageContainer.appendChild(img);
+//imageContainer.appendChild(link);
+//imageContainer.appendChild(img);
 imageContainer.appendChild(bottomLeft);
 imageContainer.appendChild(uploader);
 
 container.appendChild(imageContainer);
+//console.log(imageContainer)
 });
 }
 

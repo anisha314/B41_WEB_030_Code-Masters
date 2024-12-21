@@ -47,10 +47,14 @@ function populateGallery(items) {
         const imageContainer = document.createElement("div");
         imageContainer.className = "image-container";
 
+        const link = document.createElement("a");
+        link.href = "../src/index.html"; // Replace this with your actual URL or dynamic value
+
         const img = document.createElement("img");
         img.src = item.image;
         img.alt = item.name;
-
+        link.appendChild(img);
+        imageContainer.appendChild(link);
         const bottomLeft = document.createElement("div");
         bottomLeft.className = "bottom-left";
 
@@ -81,7 +85,7 @@ function populateGallery(items) {
         const uploader = document.createElement("p");
         uploader.textContent = item.uploaderName;
 
-        imageContainer.appendChild(img);
+        //imageContainer.appendChild(img);
         imageContainer.appendChild(bottomLeft);
         imageContainer.appendChild(uploader);
 
